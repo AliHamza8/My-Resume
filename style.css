@@ -12,10 +12,25 @@ body {
 }
 
 .container {
+    position: relative;
     max-width: 90%;
-    margin: 0 0 0 10%;
-    /* margin: 0 auto; */
-    /* background-color: rgb(139, 249, 190); */
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 10%;
+}
+
+.header-photo {
+    position: absolute;
+    right: 0;
+    top: 0;
+    width: 35rem;
+    height: 32rem;
+    background-image: url('images/yellow-bg.png');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    z-index: 1;
 }
 
 .branding {
@@ -27,13 +42,12 @@ nav {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    background-color: rgba(255,255, 255, 0.2);
-    z-index: -2;
+    z-index: 2;
 }
 
 .navbar {
     position: absolute;
-    right: 1rem;
+    right: 5rem;
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -41,7 +55,7 @@ nav {
 
 .nav-item {
     list-style: none;
-    margin-right: 1.5rem;
+    margin-right: 1.8rem;
 }
 
 .nav-link {
@@ -72,15 +86,7 @@ nav {
     max-width: 90%;
 }
 
-.header-photo {
-    width: 45rem;
-    height: 35rem;
-    background-image: url('images/yellow-bg.png');
-    background-position: center;
-    background-size: cover;
-    background-repeat: no-repeat;
-    z-index: 5;
-}
+
 
 
 
