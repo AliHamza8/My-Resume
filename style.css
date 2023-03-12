@@ -16,15 +16,18 @@ body {
 }
 
 .btn-scroll {
+    /* display: none; */
     position: fixed;
-    /* bottom: 2rem; */
+    bottom: 2rem;
     right: 1rem;
-    padding: 0.5rem 0.5rem;
+    padding: 0.2rem 0.3rem;
     border: none;
     outline: none;
     cursor: pointer;
-    box-shadow: 0 0 3px 1px rgb(180, 177, 177);
+    box-shadow: 0 0 5px 1px rgb(80, 78, 78);
     transition: all 0.4s ease-in-out;
+    z-index: 99;
+    border-radius: 5px;
 }
 
 .btn-scroll:hover {
