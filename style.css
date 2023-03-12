@@ -81,6 +81,20 @@ nav {
     z-index: 2;
 }
 
+.hamburger {
+    display: none;
+    cursor: pointer;
+}
+
+.bar {
+    display: block;
+    width: 25px;
+    height: 3px;
+    margin: 5px auto;
+    transition: all 0.4s ease-in-out;
+    background-color: black;
+}
+
 .navbar {
     position: absolute;
     right: 5rem;
@@ -367,11 +381,51 @@ nav {
     }
 }
 
+@media (max-width: 768px) {
+    .hamburger {
+        display: block;
+        margin-right: 2rem;
+    }
+
+    .hamburger.active .bar:nth-child(2) {
+        opacity: 0;
+    }
+
+    .hamburger.active .bar:nth-child(1) {
+        transform: translateY(8px) rotate(45deg);
+    }
+
+    .hamburger.active .bar:nth-child(3) {
+        transform: translateY(-8px) rotate(-45deg);
+    }
+
+    .navbar {
+        position: fixed;
+        left: -100%;
+        top: 0;
+        flex-direction: column;
+        background-color: rgb(216, 181, 6);
+        width: 100%;
+        text-align: center;
+        transition: 0.4s;
+    }
+
+    .nav-item {
+        margin: 1rem 0;
+    }
+
+    .navbar.active {
+        left: 0;
+    }
+}
+
 @media (max-width: 668px) {
+
     .wrapper {
         margin-top: 20rem;
         z-index: 2;
     }
+
     .header-photo {
         z-index: -1;
         width: 35rem;
