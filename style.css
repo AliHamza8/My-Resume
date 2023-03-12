@@ -17,6 +17,7 @@ body {
 
 .btn-scroll {
     /* display: none; */
+    background-color: rgb(216, 181, 6);
     position: fixed;
     bottom: 2rem;
     right: 1rem;
@@ -30,6 +31,10 @@ body {
     border-radius: 5px;
 }
 
+.c-ico {
+    color: white;
+}
+
 .btn-scroll:hover {
     background-color: rgb(221, 218, 218);
 }
@@ -39,37 +44,16 @@ body {
 }
 
 .container {
-    position: relative;
     max-width: 90%;
-    top: 0;
-    right: 0;
-    bottom: 0;
-    left: 10%;
+    margin: 0 auto;
 }
-
-.header-photo {
-    position: absolute;
-    right: 0;
-    top: 0;
-    width: 35rem;
-    height: 32rem;
-    background-image: url('images/yellow-bg.png');
-    background-repeat: no-repeat;
-    background-size: cover;
-    background-position: center;
-    z-index: 1;
-}
-
-.personal-photo {
-    margin-top: 1.5rem;
-    margin-left: 18rem;
-}
-
 
 /* Navbar and Branding */
 .branding {
     font-size: 1.3rem;
     padding: 0.2rem;
+    font-weight: bold;
+    letter-spacing: 0.2rem;
 }
 
 nav {
@@ -109,7 +93,6 @@ nav {
 }
 
 .nav-link {
-    /* padding: 0.1rem 0; */
     text-decoration: none;
     color: rgb(34, 33, 33);
     transition: all 0.1s ease-in-out;
@@ -124,7 +107,7 @@ nav {
     max-width: 100%;
     display: flex;
     align-items: center;
-    justify-content: space-between;
+    justify-content: space-around;
 }
 
 .header-description {
@@ -133,6 +116,7 @@ nav {
 }
 
 .small-text {
+    text-align: center;
     font-size: 0.8rem;
     color: rgb(232, 196, 6);
     font-weight: bold;
@@ -152,6 +136,32 @@ nav {
 
 .btns {
     margin-top: 1rem;
+}
+
+.ico {
+    margin-left: 4px;
+    font-size: 1rem;
+}
+
+.header-photo {
+    position: relative;
+    width: 14rem;
+    height: 14rem;
+    z-index: 1;
+    border-radius: 50%;
+    border: 3px solid rgb(216, 181, 6);
+}
+
+.personal-photo {
+    border-bottom-left-radius: 8rem;
+    border-bottom-right-radius: 8rem;
+    position: absolute;
+    width: 13rem;
+    top: -1.4rem;
+    right: 1rem;
+    bottom: 5.5rem;
+    left: 0;
+    filter: grayscale(100%);
 }
 
 .projects-btn {
@@ -345,11 +355,7 @@ nav {
     .wrapper {
         z-index: 2;
     }
-    .header-photo {
-        z-index: -1;
-        width: 55rem;
-        height: 42rem;
-    }
+
     .header-description {
         padding: 1rem;
         max-width: 50%;
@@ -358,15 +364,9 @@ nav {
 }
 
 
-
 @media (min-width: 668px) and (max-width: 992px) {
     .wrapper {
         z-index: 2;
-    }
-    .header-photo {
-        z-index: -1;
-        width: 40rem;
-        height: 37rem;
     }
     
     .header-description {
@@ -421,26 +421,30 @@ nav {
 
 @media (max-width: 668px) {
 
-    .wrapper {
-        margin-top: 20rem;
-        z-index: 2;
-    }
-
-    .header-photo {
-        z-index: -1;
-        width: 35rem;
-        height: 32rem;
-    }
-    
     .header-description {
-        margin: 0 auto;
-        padding: 1rem;
-        max-width: 75%;
+        max-width: 100%;
     }
 
     .intro-heading {
+        text-align: center;
         font-size: 1.5rem;
     }
+
+    .intro-description {
+        margin: 0 auto;
+        text-align: center;
+    }
+
+    .btns {
+        position: relative;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        gap: 0.3rem;
+        flex-wrap: wrap;
+        text-align: center;
+        max-width: 100%;
+    } 
 
     .project-1-btns {
         display: flex;
@@ -452,7 +456,6 @@ nav {
 @media (max-width: 1145px) {
     
     .projects-descriptions {
-        
         margin: 0 0 3rem 0;
         padding: 2rem 0;
         display: flex;
@@ -512,5 +515,31 @@ nav {
 
     .p-1-btn {
         margin: 0 auto;
+    }
+}
+
+@media (max-width: 960px) {
+    .wrapper {
+        margin-top: 3rem;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        z-index: 2;
+    }
+    
+    .header-description {
+        margin: 0 auto;
+        padding: 1rem;
+        /* max-width: 75%; */
+        order: 2;
+    }
+    
+    .header-photo {
+        z-index: -1;
+        order: 1;
+    }
+
+    .personal-photo {
+        z-index: 99;
     }
 }
