@@ -9,33 +9,113 @@
 </head>
 <body>
     <div class="container">
+        <button class="btn-scroll"><a href="#"><img src="images/icons8-chevron-up-30.png" alt=""></a></button>
         <div class="header-photo">
-            
+            <img src="images/sm-size-removebg-preview.png" alt="" class="personal-photo">
         </div>
         <header>
             <nav>
                 <div class="branding">Ali Hamza</div>
                 <ul class="navbar">
+                    <li class="nav-item"><a href="#my-skills" class="nav-link">Skills</a></li>
                     <li class="nav-item"><a href="#" class="nav-link">About</a></li>
-                    <li class="nav-item"><a href="#" class="nav-link">Projects</a></li>
-                    <li class="nav-item"><a href="#" class="nav-link">Contact</a></li>
+                    <li class="nav-item"><a href="#hero-section" class="nav-link">Projects</a></li>
+                    <li class="nav-item"><a href="#contact-section" class="nav-link">Contact</a></li>
                 </ul>
             </nav>
-            <!-- <div class="wrapper">
+            <div class="wrapper">
                 <div class="header-description">
                     <span class="small-text">WEB DEVELOPER</span>
-                    <h1 class="intro-heading">Hello, my name is Ali Hamza</h1>
+                    <h1 class="intro-heading">Hello, my name<br> is Ali Hamza</h1>
                     <p class="intro-description">
-                        I'm a Web Developer. Converting enchanting web designs to a real website is my passion.
+                        I'm a Web Developer. Converting enchanting web designs into real websites is my passion.
                     </p>
-                    <button class="projects">Projects</button>
-                    <button class="repo"><a href="#" class="repo-link">Github</a></button>
+                    <div class="btns">
+                        <button class="projects-btn"><a href="#hero-section" class="projects-btn-link">Projects</a></button>
+                        <button class="repo-btn"><a href="https://github.com/AliHamza8" class="repo-link">Github</a></button>
+                    </div>
+                    
                 </div>
                 
-            </div> -->
+            </div>
             
         </header>
     </div>
+
+    <div class="skills-container" id="my-skills">
+
+        <h1 class="skills-heading">Skills</h1>
+        <div class="border-bottom"></div>
+        <p class="skills-description">I'm proficient in converting web designs made in xd, psd and figma to pure HTML and CSS as well as Bootstrap Website Design.</p>
         
+        <div class="skills-wrapper">
+            <div class="html-card card">
+                <img src="images/html-coding.png" alt="" class="html-image skill-image">
+                <h3 class="html-heading inner-card-heading">HTML</h3>
+                <p class="card-description">Lorem ipsum dolor sit amet consectetur adipisicing elit. Animi, excepturi!</p>
+            </div>
+            <div class="css-card card">
+                <img src="images/css.png" alt="" class="css skill-image">
+                <h3 class="css-heading inner-card-heading">CSS</h3>
+                <p class="card-description">Lorem ipsum dolor sit amet consectetur adipisicing elit. Enim, eaque.</p>
+            </div>
+            <div class="bootstrap-card card">
+                <img src="images/bootstrap.png" alt="" class="bootstrap-image skill-image">
+                <h3 class="bootstrap-heading inner-card-heading">Bootstrap</h3>
+                <p class="card-description">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Repellat, tempora!</p>
+            </div>
+            <div class="git-card card">
+                <img src="images/git.png" alt="" class="git-image skill-image">
+                <h3 class="git-heading inner-card-heading">Git</h3>
+                <p class="card-description">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Repellat, tempora!</p>
+            </div>
+            
+        </div>
+    </div>
+
+    <div class="lower-container" id="hero-section">
+
+        <h1 class="projects-main-heading">Projects</h1>
+        <div class="border-bottom"></div>
+
+        <div class="p-wrapper">
+            <!-- Project-1 -->
+            <div class="my-project-1 projects-descriptions">
+                <div class="project-1 project">
+                    <h2 class="project-name">Emaan Electrons</h2>
+                    <p class="project-1-description projects">
+                      Lorem ipsum dolor sit, amet consectetur adipisicing elit. Impedit, deleniti
+                    </p>
+                    <div class="project-1-btns">
+                        <button class="project-1-web-btn p-1-btn"><a href="https://myelectronics.netlify.app" class="project-1-web-link p-1-btn-link">View Project</a></button>
+                        <button class="project-1-code-btn p-1-btn"><a href="" class="project-1-code-link p-1-btn-link">View Code</a></button>
+                    </div>
+                </div>
+                <img src="images/screencapture-emaan.png" alt="" class="project-1-image p-image">
+            </div>
+            <!-- Project-2 -->
+            <div class="my-project-2 projects-descriptions">
+                <div class="project-2 project">
+                    <h2 class="project-name">Trending Website</h2>
+                    <p class="project-1-description projects">
+                      Lorem ipsum dolor sit, amet consectetur adipisicing elit. Impedit, deleniti
+                    </p>
+                    <div class="project-1-btns">
+                        <button class="project-1-web-btn p-1-btn"><a href="https://trendingwebsite.netlify.app" class="project-1-web-link p-1-btn-link">View Project</a></button>
+                        <button class="project-1-code-btn p-1-btn"><a href="https://github.com/AliHamza8/My-Resume" class="project-1-code-link p-1-btn-link">View Code</a></button>
+                    </div>
+                </div>
+                <img src="images/trending-webpage.png" alt="" class="project-2-image p-image">
+            </div>
+        </div>
+        
+    </div>
+        <div class="footer" id="contact-section">
+            <a href=""><img src="images/instagram.png" alt="" class="f-image"></a>
+            <a href=""><img src="images/linkedin.png" alt="" class="f-image"></a>
+            <a href=""><img src="images/email.png" alt="" class="f-image"></a>
+            
+        </div>
+        <p class="f-para">Copyrights &copy; 2023 Made by Ali Hamza</p>
 </body>
 </html>

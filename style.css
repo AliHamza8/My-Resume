@@ -7,8 +7,32 @@
     box-sizing: border-box;
 }
 
+html {
+    scroll-behavior: smooth;
+}
+
 body {
     font-family: 'Poppins', sans-serif;
+}
+
+.btn-scroll {
+    position: fixed;
+    /* bottom: 2rem; */
+    right: 1rem;
+    padding: 0.5rem 0.5rem;
+    border: none;
+    outline: none;
+    cursor: pointer;
+    box-shadow: 0 0 3px 1px rgb(180, 177, 177);
+    transition: all 0.4s ease-in-out;
+}
+
+.btn-scroll:hover {
+    background-color: rgb(221, 218, 218);
+}
+
+.btn-scroll a {
+    text-decoration: none;
 }
 
 .container {
@@ -33,12 +57,21 @@ body {
     z-index: 1;
 }
 
+.personal-photo {
+    margin-top: 1.5rem;
+    margin-left: 18rem;
+}
+
+
+/* Navbar and Branding */
 .branding {
     font-size: 1.3rem;
+    padding: 0.2rem;
 }
 
 nav {
     position: relative;
+    padding-top: 0.5rem;
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -59,12 +92,18 @@ nav {
 }
 
 .nav-link {
+    /* padding: 0.1rem 0; */
     text-decoration: none;
     color: rgb(34, 33, 33);
+    transition: all 0.1s ease-in-out;
+}
+
+.nav-link:hover {
+    border-bottom: 3px solid rgb(65, 64, 64);
 }
 
 .wrapper {
-    /* background-color: grey; */
+    margin-top: 8rem;
     max-width: 100%;
     display: flex;
     align-items: center;
@@ -72,21 +111,349 @@ nav {
 }
 
 .header-description {
-    background-color: skyblue;
+    padding: 1rem;
     max-width: 45%;
 }
 
+.small-text {
+    font-size: 0.8rem;
+    color: rgb(232, 196, 6);
+    font-weight: bold;
+}
+
 .intro-heading {
+    font-size: 2.2rem;
     font-family: 'Playfair Display', serif;
     color: rgb(34, 33, 33);
 }
 
 .intro-description {
-    background-color: grey;
+    margin-top: 1.3rem;
     max-width: 90%;
+    color: rgb(58, 56, 56);
+}
+
+.btns {
+    margin-top: 1rem;
+}
+
+.projects-btn {
+    color: rgb(48, 48, 48);
+    padding: 0.3rem 1rem;
+    background-color: rgb(232, 195, 6);
+    border: 1px solid rgb(232, 196, 6);
+    outline: none;
+    cursor: pointer;
+    margin-right: 1rem;
+    border-radius: 3px;
+    transition: all 0.2s ease-in-out;
+}
+
+.projects-btn:hover {
+    background-color: rgb(216, 181, 6);
+}
+
+.projects-btn-link {
+    text-decoration: none;
+    color: rgb(34, 33, 33);
+}
+
+.repo-btn {
+    padding: 0.3rem 1rem;
+    border: 1px solid black;
+    outline: none;
+    cursor: pointer;
+    border-radius: 3px;
+    transition: all 0.2s ease-in-out;
+}
+
+.repo-btn:hover {
+    background-color: rgb(221, 218, 218);
+}
+
+.repo-link {
+    text-decoration: none;
+    color: black;
+}
+
+
+/* Projects */
+.lower-container {
+    max-width: 60%;
+    margin: 10rem auto 5rem auto;
+}
+
+.projects-main-heading {
+    font-family: 'Playfair Display', serif;
+    text-align: center;
+}
+
+.border-bottom {
+    margin: 0.3rem auto;
+    width: 4rem;
+    height: 3px;
+    background-color: rgb(216, 181, 6);
+}
+
+.p-wrapper {
+    margin-top: 3rem;
+    
+}
+
+.projects-descriptions {
+    margin: 0 0 3rem 0;
+    padding: 2rem 5rem;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    border-radius: 1rem;
+}
+
+.project {
+    max-width: 50%;
+    padding: 1rem;
+}
+
+.project-name {
+    font-family: 'Playfair Display', serif;
+}
+
+.project-1-description {
+    margin-top: 1.5rem;
+}
+
+.project-1-btns {
+    margin-top: 1rem;
+}
+
+.p-1-btn {
+    margin-right: 0.5rem;
+    padding: 0.5rem 1rem;
+    border-radius: 1rem;
+    border: 1px solid black;
+    outline: none;
+    cursor: pointer;
+    transition: all 0.4s ease-in-out;
+}
+
+.p-1-btn:hover {
+    background-color: rgb(221, 218, 218);
+}
+
+.p-1-btn-link {
+    text-decoration: none;
+    color: black;
+}
+
+.p-image {
+    width: 15rem;
+    box-shadow: 0 0 2px 1px rgb(164, 163, 163);
+}
+
+.project-2 {
+    order: 2;
+}
+
+.project-2-image {
+    order: 1;
+}
+
+.skills-container {
+    max-width: 70%;
+    margin: 10rem auto;
+}
+
+.skills-heading {
+    text-align: center;
+    font-family: 'Playfair Display', serif;
+}
+
+.skills-description {
+    margin: 1.5rem auto;
+    max-width: 60%;
+    text-align: center
+}
+
+.skills-wrapper {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    gap: 3rem;flex-wrap: wrap;
+}
+
+.card {
+    border-radius: 5px;
+    padding: 1rem;
+    max-width: 20rem;
+    box-shadow: 0 0 3px 2px rgb(173, 172, 172);
+}
+
+.skill-image {
+    display: block;
+    margin: 0 auto;
+}
+
+.inner-card-heading {
+    margin: 1rem 0;
+    text-align: center;
+}
+
+.card-description {
+    text-align: center;
+}
+
+/* Footer */
+.footer {
+    margin: 0 auto;
+    max-width: 10rem;
+    text-align: center;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.f-image {
+    margin-right: 0.5rem;
+    width: 2rem;
+    padding: 1rem 0;
+}
+
+.f-para {
+    padding: 1rem 0;
+    text-align: center;
+}
+
+@media (min-width: 720px) and (max-width: 992px) {
+    
+    .wrapper {
+        z-index: 2;
+    }
+    .header-photo {
+        z-index: -1;
+        width: 55rem;
+        height: 42rem;
+    }
+    .header-description {
+        padding: 1rem;
+        max-width: 50%;
+        margin: 0 25% 0 0;
+    }
 }
 
 
 
+@media (min-width: 668px) and (max-width: 992px) {
+    .wrapper {
+        z-index: 2;
+    }
+    .header-photo {
+        z-index: -1;
+        width: 40rem;
+        height: 37rem;
+    }
+    
+    .header-description {
+        padding: 1rem;
+        max-width: 50%;
+    }
 
+    .project-1-btns {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 0.5rem;
+    }
+}
 
+@media (max-width: 668px) {
+    .wrapper {
+        margin-top: 20rem;
+        z-index: 2;
+    }
+    .header-photo {
+        z-index: -1;
+        width: 35rem;
+        height: 32rem;
+    }
+    
+    .header-description {
+        margin: 0 auto;
+        padding: 1rem;
+        max-width: 75%;
+    }
+
+    .intro-heading {
+        font-size: 1.5rem;
+    }
+
+    .project-1-btns {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 0.5rem;
+    }
+}
+
+@media (max-width: 1145px) {
+    
+    .projects-descriptions {
+        
+        margin: 0 0 3rem 0;
+        padding: 2rem 0;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        border-radius: 1rem;
+    }
+    
+    .project {
+        max-width: 50%;
+        padding: 1rem;
+    }
+    }
+@media (max-width: 812px) {
+    .skills-wrapper {
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+}
+
+@media (max-width: 780px) {
+
+    .lower-container {
+        max-width: 80%;;
+    }
+
+    .projects-descriptions {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        flex-direction: column;
+    }
+    
+    .project {
+        max-width: 75%;
+        text-align: center;
+        padding: 1rem;
+    }
+    
+    .project-name {
+        text-align: center;
+    }
+
+    .project-1-btns {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .project-2 {
+        order: 1;
+    }
+
+    .project-2-image {
+        order: 2;
+    }
+
+    .p-1-btn {
+        margin: 0 auto;
+    }
+}
