@@ -143,25 +143,11 @@ nav {
     font-size: 1rem;
 }
 
-.header-photo {
-    position: relative;
-    width: 14rem;
-    height: 14rem;
-    z-index: 1;
-    border-radius: 50%;
-    border: 3px solid rgb(216, 181, 6);
-}
-
 .personal-photo {
-    border-bottom-left-radius: 8rem;
-    border-bottom-right-radius: 8rem;
-    position: absolute;
     width: 13rem;
-    top: -1.4rem;
-    right: 1rem;
-    bottom: 5.5rem;
-    left: 0;
-    filter: grayscale(100%);
+    height: 14rem;
+    border: 3px solid rgb(216, 181, 6);
+    border-radius: 50%;
 }
 
 .projects-btn {
@@ -382,9 +368,15 @@ nav {
 }
 
 @media (max-width: 768px) {
+
+    .btn-scroll {
+        display: none;
+    }
+
     .hamburger {
+        position: fixed;
         display: block;
-        margin-right: 2rem;
+        right: 2rem;
     }
 
     .hamburger.active .bar:nth-child(2) {
@@ -421,6 +413,9 @@ nav {
 
 @media (max-width: 668px) {
 
+    .small-text {
+        display: none;
+    }
     .header-description {
         max-width: 100%;
     }
@@ -428,6 +423,7 @@ nav {
     .intro-heading {
         text-align: center;
         font-size: 1.5rem;
+        margin: 0 0 1rem 0;
     }
 
     .intro-description {
@@ -446,10 +442,30 @@ nav {
         max-width: 100%;
     } 
 
+    .project {
+        max-width: 100%;
+    }
+
+    .project-1-description {
+        max-width: 100%;
+    }
+
+    .project-1-description {
+        max-width: 100%;
+    }
+
     .project-1-btns {
         display: flex;
         flex-wrap: wrap;
         gap: 0.5rem;
+    }
+
+    .skills-container  {
+        max-width: 90%;
+    }
+
+    .skills-description {
+        max-width: 95%;
     }
 }
 
@@ -465,7 +481,6 @@ nav {
     }
     
     .project {
-        max-width: 50%;
         padding: 1rem;
     }
     }
@@ -491,7 +506,6 @@ nav {
     }
     
     .project {
-        max-width: 75%;
         text-align: center;
         padding: 1rem;
     }
@@ -530,16 +544,6 @@ nav {
     .header-description {
         margin: 0 auto;
         padding: 1rem;
-        /* max-width: 75%; */
         order: 2;
-    }
-    
-    .header-photo {
-        z-index: -1;
-        order: 1;
-    }
-
-    .personal-photo {
-        z-index: 99;
     }
 }
