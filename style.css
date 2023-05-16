@@ -423,7 +423,7 @@ nav {
         left: -100%;
         top: 0;
         flex-direction: column;
-        background-color: rgb(216, 181, 6);
+        background-color: var(--primary-color);
         width: 100%;
         text-align: center;
         transition: 0.4s;
